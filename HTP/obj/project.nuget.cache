@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xuG3cSE/bxbS2Dh1eGJy9l4KHuQJZS/s8u8kQ89qWZuoSRsEe23Jvze2bOqTbfJ3d1vRi3zMZb3zha5QKqptPA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joel.herfindal\\Documents\\Programering\\Terminsprojekt- Höst2020\\HTP\\HTP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joel.herfindal\\.nuget\\packages\\raylib-cs\\3.1.5\\raylib-cs.3.1.5.nupkg.sha512",
+    "C:\\Users\\joel.herfindal\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
