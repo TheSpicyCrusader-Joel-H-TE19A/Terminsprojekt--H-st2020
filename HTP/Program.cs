@@ -30,8 +30,8 @@ namespace HTP
 
             Rectangle platform1 = new Rectangle(100, 300, 250, 20);
             Rectangle platform2 = new Rectangle(850, 500, 250, 20);
-            Rectangle player1hurtbox = new Rectangle(Player1X + 30, Player1Y + 15, 35, 25);
-            Rectangle player2hurtbox = new Rectangle(Player2X + 30, Player2Y + 15, 35, 25);
+            Rectangle player1hurtbox = new Rectangle(Player1X - 60, Player1Y + 30, 35, 25);
+            Rectangle player2hurtbox = new Rectangle(Player2X + 60, Player2Y + 30, 35, 25);
 
             while (!Raylib.WindowShouldClose())
             {
@@ -132,14 +132,14 @@ namespace HTP
 
                     //Attack 1
 
-                    if (Raylib.IsKeyDown(KeyboardKey.KEY_C))
+                    if (Raylib.IsKeyDown(KeyboardKey.KEY_M))
                     {
                         Raylib.DrawRectangleRec(player1hurtbox, Color.DARKPURPLE);
                     }
 
                     //Attack 2
 
-                    if (Raylib.IsKeyDown(KeyboardKey.KEY_M))
+                    if (Raylib.IsKeyDown(KeyboardKey.KEY_C))
                     {
                         Raylib.DrawRectangleRec(player2hurtbox, Color.RED);
                     }
