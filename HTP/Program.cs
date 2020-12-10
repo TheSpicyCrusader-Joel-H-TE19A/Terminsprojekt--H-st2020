@@ -30,11 +30,12 @@ namespace HTP
 
             Rectangle platform1 = new Rectangle(100, 300, 250, 20);
             Rectangle platform2 = new Rectangle(850, 500, 250, 20);
+            Rectangle player1hurtbox = new Rectangle(Player1X + 30, Player1Y + 15, 35, 25);
+            Rectangle player2hurtbox = new Rectangle(Player2X + 30, Player2Y + 15, 35, 25);
 
             while (!Raylib.WindowShouldClose())
             {
                 Raylib.BeginDrawing();
-
                 if (scene == "Menu")
                 {
                     Raylib.ClearBackground(Color.DARKBLUE);
@@ -98,6 +99,8 @@ namespace HTP
 
                     Player1X += xMovement;
                     Player1Y += yMovement;
+                    player1hurtbox.x += xMovement;
+                    player1hurtbox.y += yMovement;
                     float xMovement2 = 0;
                     float yMovement2 = 0;
 
@@ -124,29 +127,24 @@ namespace HTP
 
                     Player2X += xMovement2;
                     Player2Y += yMovement2;
-                    // if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && Player2X < Width - 90)
-                    // {
-                    //     Player2X += Speed;
-                    // }
+                    player2hurtbox.x += xMovement2;
+                    player2hurtbox.y += yMovement2;
 
-                    // if (Raylib.IsKeyDown(KeyboardKey.KEY_A) && Player2X > 0)
-                    // {
-                    //     Player2X -= Speed;
-                    // }
+                    //Attack 1
 
-                    // if (Raylib.IsKeyDown(KeyboardKey.KEY_W) && Player2Y > 0)
-                    // {
-                    //     Player2Y -= Speed;
-                    // }
+                    if (Raylib.IsKeyDown(KeyboardKey.KEY_C))
+                    {
+                        Raylib.DrawRectangleRec(player1hurtbox, Color.DARKPURPLE);
+                    }
 
-                    // if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && Player2Y < Height - 112.5)
-                    // {
-                    //     Player2Y += Speed;
-                    // }
-                    // if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && Player2Y < Height - 112.5)
-                    // {
-                    //     Player2Y += Speed;
-                    // }
+                    //Attack 2
+
+                    if (Raylib.IsKeyDown(KeyboardKey.KEY_M))
+                    {
+                        Raylib.DrawRectangleRec(player2hurtbox, Color.RED);
+                    }
+
+
 
                     if (Raylib.IsKeyPressed(KeyboardKey.KEY_TAB))
                     {
@@ -195,6 +193,7 @@ namespace HTP
         }
     }
 }
+
 
 
 
