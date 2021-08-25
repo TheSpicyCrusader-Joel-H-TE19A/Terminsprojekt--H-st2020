@@ -9,7 +9,7 @@ namespace HTP
     {
         static void Main(string[] args)
         {
-            Raylib.InitWindow(1900, 900, "Möst Epic Battles of Hisotry B)");
+            Raylib.InitWindow(1900, 900, "M0st Epic Battles of Hisotry");
 
             Texture2D BBB = Raylib.LoadTexture("Bling-Bling_Boy.png");
 
@@ -36,20 +36,17 @@ namespace HTP
             int ballspeedy = 3;
             string Player1 = "Alive";
             string Player2 = "Alive";
+            int Player1Points = 0;
+            int Player2Points = 0;
             string scene = "Menu";
-            // string Player1 = "Player1";
-            // string Player2 = "Player2";
-            // int Player1HP = 200;
-            // int Player2HP = 200;
-
-            // Random PlayerDMG = new Random();
 
 
-
+            //TrollFace speed/movement changers 
             Rectangle Ability1 = new Rectangle(200, 450, 25, 25);
             Rectangle Ability2 = new Rectangle(Width / 2, 800, 25, 25);
             Rectangle Ability3 = new Rectangle(1700, 450, 25, 25);
             Rectangle Ability4 = new Rectangle(Width / 2, 100, 25, 25);
+            //Player speed/movement changers 
             Rectangle Ability5 = new Rectangle(0, 0, 25, 25);
             Rectangle Ability6 = new Rectangle(Width - 25, 0, 25, 25);
             Rectangle Ability7 = new Rectangle(0, Height - 25, 25, 25);
@@ -66,6 +63,9 @@ namespace HTP
                     Raylib.DrawText("Press ENTER to begin", 600, 300, 50, Color.BLACK);
                     Raylib.DrawText("Player 1", 1400, 600, 80, Color.WHITE);
                     Raylib.DrawText("Player 2", 100, 600, 80, Color.WHITE);
+                    Raylib.DrawText("P1: " + Player1Points, 1650, 50, 75, Color.WHITE);
+                    Raylib.DrawText("P2: " + Player2Points, 100, 50, 75, Color.WHITE);
+
 
                     if (Raylib.IsKeyPressed(KeyboardKey.KEY_ENTER))
                     {
@@ -81,16 +81,12 @@ namespace HTP
                         Raylib.DrawText("BEGIN!", 775, 350, 100, Color.WHITE);
                     }
 
-                    // Raylib.DrawText($"{Player2} HP: {Player2HP}", 975, 50, 25, Color.WHITE);
-                    // Raylib.DrawText($"{Player1} HP: {Player1HP}", 200, 50, 25, Color.WHITE);
-
+                    Raylib.DrawText("P1: " + Player1Points, 1650, 50, 75, Color.WHITE);
+                    Raylib.DrawText("P2: " + Player2Points, 100, 50, 75, Color.WHITE);
 
                     Raylib.DrawTextureEx(BBB, new Vector2(Player1X, Player1Y), 0f, 0.25f, Color.WHITE);
                     Raylib.DrawTextureEx(Slayer, new Vector2(Player2X, Player2Y), 0f, 0.25f, Color.WHITE);
                     Raylib.DrawTextureEx(Troll, new Vector2(troll.x, troll.y), 0F, 0.25f, Color.WHITE);
-
-                    // int Player1DMG = PlayerDMG.Next(1, 50);
-                    // int Player2DMG = PlayerDMG.Next(1, 20);
 
                     float xMovement = 0;
                     float yMovement = 0;
@@ -118,9 +114,6 @@ namespace HTP
 
                     Player1X += xMovement;
                     Player1Y += yMovement;
-                    // player1hurtbox.x += xMovement;
-                    // player1hurtbox.y += yMovement;
-                    //Player 2 movements
                     float xMovement2 = 0;
                     float yMovement2 = 0;
 
@@ -275,11 +268,13 @@ namespace HTP
                     if (Raylib.CheckCollisionRecs(troll, new Rectangle(Player1X, Player1Y, 75, 112)))
                     {
                         Player1 = "Dead";
+                        Player2Points = +1;
                     }
 
                     if (Raylib.CheckCollisionRecs(troll, new Rectangle(Player2X, Player2Y, 75, 112)))
                     {
                         Player2 = "Dead";
+                        Player1Points = +1;
                     }
 
                     if (Player1 == "Dead" || Player2 == "Dead")
@@ -290,15 +285,17 @@ namespace HTP
                 else if (scene == "Game Over")
                 {
                     Raylib.ClearBackground(Color.YELLOW);
+                    Raylib.DrawText("P1: " + Player1Points, 1650, 50, 75, Color.BLACK);
+                    Raylib.DrawText("P2: " + Player2Points, 100, 50, 75, Color.BLACK);
                     if (Player1 == "Dead")
                     {
-                        Raylib.DrawText("Player 2 aka Doomslayer survived the longest", 550, 100, 50, Color.BLACK);
+                        Raylib.DrawText("Player 2 aka Doomslayer survived the longest", 350, 100, 50, Color.BLACK);
                         Raylib.DrawText("Press TAB to return to menu", 700, 225, 25, Color.BLACK);
                         Raylib.DrawText("Press SPACE to play again", 700, 325, 25, Color.BLACK);
                     }
                     if (Player2 == "Dead")
                     {
-                        Raylib.DrawText("Player 1 aka Bling Bling Boy survived the longest", 550, 100, 50, Color.BLACK);
+                        Raylib.DrawText("Player 1 aka Bling Bling Boy survived the longest", 350, 100, 50, Color.BLACK);
                         Raylib.DrawText("Press TAB to return to menu", 700, 225, 25, Color.BLACK);
                         Raylib.DrawText("Press SPACE to play again", 700, 325, 25, Color.BLACK);
                     }

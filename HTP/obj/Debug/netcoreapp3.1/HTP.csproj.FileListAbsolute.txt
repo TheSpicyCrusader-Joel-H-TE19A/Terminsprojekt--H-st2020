@@ -10,7 +10,6 @@ C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\bin
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libraylib.dylib
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\raylib.dll
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\raylib.dll
-C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.csprojAssemblyReference.cache
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.AssemblyInfoInputs.cache
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.AssemblyInfo.cs
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.csproj.CoreCompileInputs.cache
@@ -18,3 +17,5 @@ C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.dll
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.pdb
 C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.genruntimeconfig.cache
+C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.csproj.AssemblyReference.cache
+C:\Users\joel.herfindal\Documents\Programering\Terminsprojekt- Höst2020\HTP\obj\Debug\netcoreapp3.1\HTP.GeneratedMSBuildEditorConfig.editorconfig
